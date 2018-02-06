@@ -4,7 +4,9 @@
   "private": true,
   "license": "BSD-3-Clause",
   "dependencies": {
-    "prpl-server":"^1.0.0"
+    "polymer": "^2.5.0",
+    "polymer-cli": "^1.6.0",
+    "prpl-server": "^1.0.0"
   },
   "devDependencies": {
     "del": "^2.2.0",

@@ -25,7 +25,7 @@
       "basePath": true
     },
     {
-      "preset": "es6-bundled",
+      "preset": "es6-bundled"
       "basePath": true
     },
     {
