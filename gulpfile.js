@@ -21,6 +21,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const ts = require('gulp-typescript');
 const tsProject = ts.createProject('tsconfig.json');
 const util = require('gulp-util');
+const run = require('gulp-run-command')
 
 // Additional plugins can be used to optimize your source files after splitting.
 // Before using each plugin, install with `npm i --save-dev <package-name>`
@@ -90,6 +91,10 @@ function typescript() {
     return tsResult.js.pipe(sourcemaps.write('.')).pipe(gulp.dest(sourceDirectory));
 }
 
+function polymerCliBuild() {
+    return run('polymer build');
+}
+
 function build() {
     return new Promise(function(resolve, reject) {
         // Lets create some inline code splitters in case you need them later in your build.
@@ -153,4 +158,4 @@ function watch() {
 
 gulp.task('typescript', typescript);
 gulp.task('watch', ['typescript'], watch);
-gulp.task('build', ['typescript'], build);
+gulp.task('build', ['typescript'], polymerCliBuild());

@@ -52,6 +52,8 @@ Next, install the dependencies:
 
 ### Build
 
+https://www.polymer-project.org/2.0/docs/tools/polymer-cli
+
 The included `gulpfile.js` relies on [the `polymer-build` library](https://github.com/Polymer/polymer-build),
 the same library that powers Polymer CLI. Out of the box it will clean the
 `build` directory, and provide image minification and compile your TypeScript code. Follow the comments in the
@@ -62,6 +64,13 @@ the dependencies based on the entrypoint and fragments specified in
 `polymer.json`.
 
     npm run build
+    
+By default, this will generate three different builds for different browsers:
+
+* es5-bundled
+* es6-bundled
+* es6-unbundled
+
 
 ### Watch file changes
 
@@ -82,7 +91,7 @@ routing for the app:
 
 This command serves your app.
 
-    polymer serve build/
+    polymer serve build
 
 ### Run tests
 
