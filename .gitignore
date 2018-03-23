@@ -2,3 +2,6 @@
 bower_components/
 build/
 node_modules/
+.idea
+src/**/*.js
+src/**/*.map

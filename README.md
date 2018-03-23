@@ -1,8 +1,17 @@
 # Polymer App Toolbox - TypeScript Starter Kit
 
-This is a TypeScript version of the Polymer 2 Starter Kit that uses the [Polymer Decorators](https://github.com/Polymer/polymer-decorators) project.
+This is a TypeScript version of the [Polymer 2 Starter Kit](https://github.com/PolymerElements/polymer-starter-kit) that 
+uses the [Polymer Decorators](https://github.com/Polymer/polymer-decorators) project and the 
+[typings that now ship with Polymer](https://github.com/Polymer/polymer/tree/master/types).
 
-> NOTE The Polymer typings are currently in the `polymer-types` folder and are derived from the typings [in this branch](https://github.com/Polymer/polymer/tree/aomarks-typescript) of the Polymer project, and will be replaced with the official typings when they are available.
+This project is an example of how to use TypeScript to build Polymer 2 applications. For examples of all of the 
+possible decorators you can use, see the [Polymer Decorators README](https://github.com/Polymer/polymer-decorators/blob/master/README.md).
+
+> NOTE: This project currently uses the [Metadata Reflection API](https://github.com/Polymer/polymer-decorators#metadata-reflection-api) 
+in order to simplify the developer experience. It does require an additional dependency, though, so if you don't want to use it, 
+just reverse the steps for including it (described in the link above).
+
+---
 
 This template is a starting point for building apps using a drawer-based
 layout. The layout is provided by `app-layout` elements.
@@ -27,13 +36,16 @@ the library powering [Polymer CLI](https://github.com/Polymer/polymer-cli).
 
 ### Prerequisites
 
-Since this project isn't yet a Polymer template (see [issue #1](https://github.com/virtua-tech/polymer-typescript-starter-kit/issues/1) to track progress), you need to clone the repo to use it.
+First, clone this repo (see [issue #1](https://github.com/virtua-tech/polymer-typescript-starter-kit/issues/1) 
+if you want this to be a Polymer CLI template).
 
-You will need to have [node](https://nodejs.org/) installed. After you have installed node, make sure you have `bower`  installed globally:
+You will need to have [npm](https://www.npmjs.com/) installed. After you have installed `npm`, make sure you have the 
+[Polymer CLI](https://github.com/Polymer/polymer-cli) and `bower` installed globally:
 
+    npm install -g polymer-cli
     npm install -g bower
 
-After you have cloned the repo installed node, and bower, install the dependencies:
+Next, install the dependencies:
 
     npm install
     bower install 
