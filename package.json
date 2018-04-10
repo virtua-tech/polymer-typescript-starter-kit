@@ -1,29 +1,13 @@
 {
-  "name": "polymer-2-typescript-starter",
-  "license": "BSD-3-Clause",
-  "devDependencies": {
-    "del": "^2.2.0",
-    "eslint": "^3.19.0",
-    "eslint-config-google": "^0.7.0",
-    "eslint-plugin-html": "^2.0.0",
-    "gulp": "^3.9.1",
-    "gulp-if": "^2.0.0",
-    "gulp-ignore": "^2.0.2",
-    "gulp-imagemin": "^3.1.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sourcemaps": "^1.12.0",
-    "gulp-typescript": "^3.2.1",
-    "gulp-util": "^3.0.8",
-    "merge-stream": "^1.0.1",
-    "polymer-build": "^1.0.0",
-    "typescript": "^2.6.2"
+  "name": "redir-psk",
+  "private": true,
+  "dependencies": {
+    "prpl-server":"^1.0.0"
   },
   "scripts": {
-    "lint": "npm run lint:javascript",
-    "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
-    "test": "polymer test",
-    "test:integration": "polymer build # test that psk builds without error with the CLI",
-    "build": "gulp build",
-    "watch": "gulp watch"
+    "start": "prpl-server --host 0.0.0.0 --port 8081 --config polymer.json"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   }
 }
