@@ -1,0 +1,22 @@
+runtime: nodejs
+env: flex
+automatic_scaling:
+  min_num_instances: 1
+
+skip_files:
+- ^README\..*
+- \.gitignore
+- \.gitattribute
+- ^\.git/.*
+- ^package-lock\.json$
+- ^\.eslintrc\.json$
+- ^yarn\.lock$
+- ^tsconfig\.json$
+- ^bower\.json$
+- ^index\.html$
+- ^\.idea/.*
+- ^images/(.*/)?
+- ^bower_components/(.*/)?
+- ^src/(.*/)?
+- ^node_modules/(.*/)?
+- ^test/(.*/)?
