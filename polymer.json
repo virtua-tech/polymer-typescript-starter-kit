@@ -14,7 +14,8 @@
   ],
   "extraDependencies": [
     "manifest.json",
-    "bower_components/webcomponentsjs/*.js"
+    "bower_components/webcomponentsjs/*.js",
+    "bower_components/reflect-metadata/Reflect.js"
   ],
   "lint": {
     "rules": ["polymer-2"]
