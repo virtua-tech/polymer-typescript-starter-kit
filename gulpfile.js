@@ -152,5 +152,5 @@ function watch() {
 }
 
 gulp.task('typescript', typescript);
-gulp.task('watch', ['typescript'], watch);
-gulp.task('build', ['typescript'], build);
+gulp.task('watch', gulp.series('typescript', watch));
+gulp.task('build', gulp.series('typescript', build));
