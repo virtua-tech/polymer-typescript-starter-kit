@@ -103,7 +103,7 @@ function build() {
                 // in your `src/` directory, or those that match your polymer.json
                 // "sources"  property if you provided one.
                 const sourcesStream = polymerProject.sources()
-                    .pipe(gulpif(/\.(png|gif|jpg|svg)$/, imagemin()))
+                    //.pipe(gulpif(/\.(png|gif|jpg|svg)$/, imagemin()))
                     .pipe(sourcesStreamSplitter.split())
                     .pipe(sourcesStreamSplitter.rejoin());
                 // Similarly, you can get your dependencies seperately and perform
