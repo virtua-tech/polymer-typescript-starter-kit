@@ -38,7 +38,7 @@ namespace App {
         @observe('page')
         _pageChanged(page) {
             // Load page import on demand. Show 404 page if fails
-            const resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+            const resolvedPageUrl = this.resolveUrl(page +'/my-' + page + '.html');
             Polymer.importHref(
                 resolvedPageUrl,
                 null,
