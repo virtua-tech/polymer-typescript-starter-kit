@@ -10,12 +10,12 @@
 'use strict';
 const del = require('del');
 const gulp = require('gulp');
-const gulpif = require('gulp-if');
-const gulpIgnore = require('gulp-ignore');
+//const gulpif = require('gulp-if');
+//const gulpIgnore = require('gulp-ignore');
 const mergeStream = require('merge-stream');
 const polymerBuild = require('polymer-build');
 // Here we add tools that will be used to process our source files.
-const imagemin = require('gulp-imagemin');
+//const imagemin = require('gulp-imagemin');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const ts = require('gulp-typescript');
@@ -96,14 +96,14 @@ function build() {
         const sourcesStreamSplitter = new polymerBuild.HtmlSplitter();
         const dependenciesStreamSplitter = new polymerBuild.HtmlSplitter();
         // Okay, so first thing we do is clear the build directory
-        console.log("Deleting " + buildDirectory + " directory...");
+        console.log('Deleting ' + buildDirectory + ' directory...');
         del([buildDirectory])
             .then(function() {
                 // Let's start by getting your source files. These are all the files
                 // in your `src/` directory, or those that match your polymer.json
                 // "sources"  property if you provided one.
                 const sourcesStream = polymerProject.sources()
-                    .pipe(gulpif(/\.(png|gif|jpg|svg)$/, imagemin()))
+                    //.pipe(gulpif(/\.(png|gif|jpg|svg)$/, imagemin()))
                     .pipe(sourcesStreamSplitter.split())
                     .pipe(sourcesStreamSplitter.rejoin());
                 // Similarly, you can get your dependencies seperately and perform
@@ -152,5 +152,5 @@ function watch() {
 }
 
 gulp.task('typescript', typescript);
-gulp.task('watch', ['typescript'], watch);
-gulp.task('build', ['typescript'], build);
+gulp.task('watch', gulp.series('typescript', watch));
+gulp.task('build', gulp.series('typescript', build));

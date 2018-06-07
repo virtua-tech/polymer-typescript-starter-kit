@@ -82,7 +82,7 @@ routing for the app:
 
 This command serves your app.
 
-    polymer serve build/
+    polymer serve build
 
 ### Run tests
 
